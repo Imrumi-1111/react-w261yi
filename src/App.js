@@ -3,7 +3,7 @@ import "./style.css";
 import  React,{ useState } from 'react'
 
 
-const Form = () => {
+export default function Form(){
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -19,11 +19,11 @@ const Form = () => {
     } else {
       // Show alert if any field is empty
       alert('Please fill in all fields.');
-    }
+    } 
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <div>
         <label htmlFor="firstName">First Name:</label>
         <input
@@ -72,5 +72,5 @@ const Form = () => {
   );
 };
 
-export default Form;
+
 
