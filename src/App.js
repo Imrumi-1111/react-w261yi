@@ -9,15 +9,12 @@ export default function Form(){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  function handleSubmit (event){
+    event.preventDefault()
     
-    // Check if all fields are filled
     if (firstName && lastName && email && password) {
-      // Perform your desired actions here, such as submitting the form or making an API request
       console.log('Form submitted!');
     } else {
-      // Show alert if any field is empty
       alert('Please fill in all fields.');
     } 
   };
